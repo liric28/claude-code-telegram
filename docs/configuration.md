@@ -63,6 +63,7 @@ DISABLE_TOOL_VALIDATION=false
 ```bash
 # Authentication
 ANTHROPIC_API_KEY=sk-ant-api03-...    # Optional: API key for SDK (uses CLI auth if omitted)
+ANTHROPIC_BASE_URL=https://api.minimaxi.com/anthropic    # Optional: Anthropic-compatible gateway base URL
 
 # Maximum conversation turns before requiring new session
 CLAUDE_MAX_TURNS=10

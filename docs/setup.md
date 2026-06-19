@@ -39,6 +39,16 @@ Uses the SDK with a direct API key, no CLI auth needed.
 ANTHROPIC_API_KEY=sk-ant-api03-your-key-here
 ```
 
+#### Option C: Anthropic-Compatible Gateway
+
+Uses the SDK with a third-party Anthropic-compatible endpoint.
+
+```bash
+# Example: MiniMax Anthropic-compatible gateway
+ANTHROPIC_API_KEY=your-gateway-key
+ANTHROPIC_BASE_URL=https://api.minimaxi.com/anthropic
+```
+
 ### 3. Install the Bot
 
 Choose your preferred installation method:

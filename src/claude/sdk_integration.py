@@ -258,6 +258,13 @@ class ClaudeSDKManager:
         else:
             logger.info("No API key provided, using existing Claude CLI authentication")
 
+        if config.anthropic_base_url:
+            os.environ["ANTHROPIC_BASE_URL"] = config.anthropic_base_url
+            logger.info(
+                "Using custom Anthropic-compatible base URL",
+                anthropic_base_url=config.anthropic_base_url,
+            )
+
     def _is_retryable_error(self, exc: BaseException) -> bool:
         """Return True for transient errors that warrant a retry.
         asyncio.TimeoutError is intentional (user-configured timeout) — not retried.
