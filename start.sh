@@ -4,6 +4,21 @@ set -euo pipefail
 SCRIPT_DIR="$HOME/.local/share/claude-code-telegram"
 cd "$SCRIPT_DIR"
 
+if [ ! -d "$SCRIPT_DIR/.venv" ]; then
+  echo "missing venv: $SCRIPT_DIR/.venv" >&2
+  exit 1
+fi
+
+if [ ! -f "$SCRIPT_DIR/.env" ]; then
+  echo "missing env file: $SCRIPT_DIR/.env" >&2
+  exit 1
+fi
+
+if [ ! -f "$HOME/.hermes/.env" ]; then
+  echo "missing hermes env: $HOME/.hermes/.env" >&2
+  exit 1
+fi
+
 source "$SCRIPT_DIR/.venv/bin/activate"
 
 set -a
